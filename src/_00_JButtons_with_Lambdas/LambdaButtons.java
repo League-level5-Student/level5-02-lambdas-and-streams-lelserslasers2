@@ -1,6 +1,8 @@
 package _00_JButtons_with_Lambdas;
 
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -17,6 +19,13 @@ public class LambdaButtons {
 		window.add(addNumbers);
 		window.add(randNumber);
 		window.add(tellAJoke);
+		
+		addNumbers.addActionListener(  (e) -> {
+			System.out.println("numbers");
+			System.out.println("added");
+			}  );
+		randNumber.addActionListener(  (e) -> System.out.println("RANDOM")  );
+		tellAJoke.addActionListener(  (e) -> System.out.println("This is a joke")  );
 		
 		//1. Call the addActionListener methods for each button. Use lambdas
 		//   to define to functionality of the buttons.
